@@ -1,2 +1,2 @@
 # Sigil-Tools
-Object-Oriented Interface to the Sigil graphics library.
+Object-Oriented Interface for the Sigil graphics library.

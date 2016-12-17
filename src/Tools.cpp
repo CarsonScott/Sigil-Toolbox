@@ -31,11 +31,6 @@ void Shape::setPosition(float x, float y)
     position = PVector(x, y);
 }
 
-PVector Shape::getPosition()
-{
-    return position;
-}
-
 void Shape::setColor(Color c)
 {
     color = c;
@@ -44,6 +39,11 @@ void Shape::setColor(Color c)
 void Shape::setColor(float r, float g, float b, float a)
 {
     color = Color(r, g, b, a);
+}
+
+PVector Shape::getPosition()
+{
+    return position;
 }
 
 Color Shape::getColor()
@@ -58,11 +58,6 @@ CircleShape::CircleShape(float x=0, float y=0, float r=0)
     color = Color();
 }
 
-float CircleShape::getRadius()
-{
-    return radius;
-}
-
 void CircleShape::drawFill()
 {
     color.setForeColor();
@@ -75,17 +70,16 @@ void CircleShape::drawOutline()
     slCircleOutline(position.x, position.y, radius, radius*2);
 }
 
+float CircleShape::getRadius()
+{
+    return radius;
+}
 
 RectangleShape::RectangleShape(float x=0, float y=0, float w=0, float h=0)
 {
     position = PVector(x, y);
     size = PVector(w, h);
     color = Color();
-}
-
-PVector RectangleShape::getSize()
-{
-    return size;
 }
 
 void RectangleShape::drawFill()
@@ -98,4 +92,9 @@ void RectangleShape::drawOutline()
 {
     color.setForeColor();
     slRectangleOutline(position.x, position.y, size.x, size.y);
+}
+
+PVector RectangleShape::getSize()
+{
+    return size;
 }

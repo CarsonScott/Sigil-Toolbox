@@ -29,9 +29,9 @@ public:
     Shape();
     void setPosition(PVector);
     void setPosition(float, float);
-    PVector getPosition();
     void setColor(Color);
     void setColor(float, float, float, float);
+    PVector getPosition();
     Color getColor();
 };
 
@@ -40,9 +40,9 @@ class CircleShape: public Shape
     float radius;
 public:
     CircleShape(float, float, float);
-    float getRadius();
     void drawFill();
     void drawOutline();
+    float getRadius();
 };
 
 class RectangleShape: public Shape
@@ -50,9 +50,9 @@ class RectangleShape: public Shape
     PVector size;
 public:
     RectangleShape(float, float, float, float);
-    PVector getSize();
     void drawFill();
     void drawOutline();
+    PVector getSize();
 };
 
 #endif // TOOLS_HPP_INCLUDED

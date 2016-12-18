@@ -1,9 +1,9 @@
 #include "Tools.hpp"
 
-PVector::PVector(float newX=0, float newY=0)
+PVector::PVector(float x=0, float y=0)
 {
-    x = newX;
-    y = newY;
+    this->x = x;
+    this->y = y;
 }
 
 Color::Color(float red=1, float green=1, float blue=1, float alpha=1)

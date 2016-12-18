@@ -20,6 +20,8 @@ struct Color
     void setForeColor();
 };
 
+PVector getMousePosition();
+
 class Shape
 {
 protected:

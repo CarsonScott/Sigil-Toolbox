@@ -14,6 +14,11 @@ Color::Color(float red=1, float green=1, float blue=1, float alpha=1)
     a = alpha;
 }
 
+PVector getMousePosition()
+{
+    return PVector(float(slGetMouseX()), float(slGetMouseY()));
+}
+
 void Color::setForeColor()
 {
     slSetForeColor(r, g, b, a);

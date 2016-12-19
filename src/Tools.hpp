@@ -49,6 +49,7 @@ public:
     CircleShape(float, float, float);
     void drawFill();
     void drawOutline();
+    void setRadius(float);
     float getRadius();
 };
 
@@ -59,6 +60,7 @@ public:
     RectangleShape(float, float, float, float);
     void drawFill();
     void drawOutline();
+    void setSize(PVector);
     PVector getSize();
 };
 

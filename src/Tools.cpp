@@ -95,6 +95,11 @@ void CircleShape::drawOutline()
     slCircleOutline(position.x, position.y, radius, radius*2);
 }
 
+void CircleShape::setRadius(float r)
+{
+    radius = r;
+}
+
 float CircleShape::getRadius()
 {
     return radius;
@@ -117,6 +122,11 @@ void RectangleShape::drawOutline()
 {
     color.setForeColor();
     slRectangleOutline(position.x, position.y, size.x, size.y);
+}
+
+void RectangleShape::setSize(PVector s)
+{
+    size = s;
 }
 
 PVector RectangleShape::getSize()

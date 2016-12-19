@@ -6,6 +6,26 @@ PVector::PVector(float x=0, float y=0)
     this->y = y;
 }
 
+PVector operator +(PVector a, PVector b)
+{
+    return PVector(a.x + b.x, a.y + b.y);
+}
+
+PVector operator -(PVector a, PVector b)
+{
+    return PVector(a.x - b.x, a.y - b.y);
+}
+
+PVector operator *(PVector a, PVector b)
+{
+    return PVector(a.x * b.x, a.y * b.y);
+}
+
+PVector operator /(PVector a, PVector b)
+{
+    return PVector(a.x / b.x, a.y / b.y);
+}
+
 Color::Color(float red=1, float green=1, float blue=1, float alpha=1)
 {
     r = red;

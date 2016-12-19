@@ -10,6 +10,11 @@ struct PVector
     PVector(float, float);
 };
 
+PVector operator +(PVector, PVector);
+PVector operator -(PVector, PVector);
+PVector operator *(PVector, PVector);
+PVector operator /(PVector, PVector);
+
 struct Color
 {
     float r;

@@ -64,4 +64,15 @@ public:
     PVector getSize();
 };
 
+class TriangleShape: public Shape
+{
+    PVector size;
+public:
+    TriangleShape(float, float, float, float);
+    void drawFill();
+    void drawOutline();
+    void setSize(PVector);
+    PVector getSize();
+};
+
 #endif // TOOLS_HPP_INCLUDED

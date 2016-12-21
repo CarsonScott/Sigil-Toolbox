@@ -133,3 +133,33 @@ PVector RectangleShape::getSize()
 {
     return size;
 }
+
+TriangleShape::TriangleShape(float x=0, float y=0, float b=0, float h=0)
+{
+    position = PVector(x, y);
+    size = PVector(b, h);
+    color = Color();
+}
+
+void TriangleShape::drawFill()
+{
+    color.setForeColor();
+    slTriangleFill(position.x, position.y, size.x, size.y);
+}
+
+void TriangleShape::drawOutline()
+{
+    color.setForeColor();
+    slTriangleFill(position.x, position.y, size.x, size.y);
+}
+
+void TriangleShape::setSize(PVector s)
+{
+    size = s;
+}
+
+PVector TriangleShape::getSize()
+{
+    return size;
+}
+

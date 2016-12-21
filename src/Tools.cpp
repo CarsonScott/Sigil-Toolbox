@@ -163,3 +163,42 @@ PVector TriangleShape::getSize()
     return size;
 }
 
+Polygon::Polygon(float x, float y, int points)
+{
+    position = PVector(x, y);
+    point_count = points;
+    center = PVector(0, 0);
+
+    for(int i = 0; i < point_count; i++)
+    {
+        this->points.push_back(PVector(0, 0));
+    }
+}
+
+void Polygon::setPoint(int point, PVector position)
+{
+    points[point] = position;
+
+    center = PVector(0, 0);
+    for(int i = 0; i < point_count; i++)
+    {
+        center = center + points[i];
+    }
+    center = center / PVector(point_count, point_count);
+}
+
+void Polygon::drawOutline()
+{
+    color.setForeColor();
+    for(int i = 0; i < point_count; i++)
+    {
+        int index = i + 1;
+        if(index == point_count)
+            index = 0;
+
+        PVector pos_a = points[i] - center + position;
+        PVector pos_b = points[index] - center + position;
+        slLine(pos_a.x, pos_a.y, pos_b.x, pos_b.y);
+    }
+}
+

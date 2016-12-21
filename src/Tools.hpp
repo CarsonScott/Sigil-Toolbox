@@ -1,6 +1,7 @@
 #ifndef TOOLS_HPP_INCLUDED
 #define TOOLS_HPP_INCLUDED
 
+#include <vector>
 #include "sl.h"
 
 struct PVector
@@ -73,6 +74,17 @@ public:
     void drawOutline();
     void setSize(PVector);
     PVector getSize();
+};
+
+class Polygon: public Shape
+{
+    int point_count;
+    std::vector<PVector> points;
+    PVector center;
+public:
+    Polygon(float, float, int);
+    void setPoint(int, PVector);
+    void drawOutline();
 };
 
 #endif // TOOLS_HPP_INCLUDED

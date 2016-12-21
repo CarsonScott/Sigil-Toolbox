@@ -83,8 +83,10 @@ class Polygon: public Shape
     PVector center;
 public:
     Polygon(float, float, int);
-    void setPoint(int, PVector);
     void drawOutline();
+    void setPoint(int, PVector);
+    PVector getPoint(int);
+    int getPointCount();
 };
 
 #endif // TOOLS_HPP_INCLUDED

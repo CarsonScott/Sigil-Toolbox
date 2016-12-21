@@ -175,18 +175,6 @@ Polygon::Polygon(float x, float y, int points)
     }
 }
 
-void Polygon::setPoint(int point, PVector position)
-{
-    points[point] = position;
-
-    center = PVector(0, 0);
-    for(int i = 0; i < point_count; i++)
-    {
-        center = center + points[i];
-    }
-    center = center / PVector(point_count, point_count);
-}
-
 void Polygon::drawOutline()
 {
     color.setForeColor();
@@ -202,3 +190,24 @@ void Polygon::drawOutline()
     }
 }
 
+void Polygon::setPoint(int point, PVector position)
+{
+    points[point] = position;
+
+    center = PVector(0, 0);
+    for(int i = 0; i < point_count; i++)
+    {
+        center = center + points[i];
+    }
+    center = center / PVector(point_count, point_count);
+}
+
+PVector Polygon::getPoint(int point)
+{
+    return points[point];
+}
+
+int Polygon::getPointCount()
+{
+    return point_count;
+}
